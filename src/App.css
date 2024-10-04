@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+button {
+  border-radius: 8px;
+  border: 5px solid transparent;
+  padding: 0.5em 1em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

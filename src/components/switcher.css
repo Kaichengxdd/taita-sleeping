@@ -1,0 +1,19 @@
+.switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.showshop,
+.showupgrades {
+  margin-top: 1em;
+  font-size: 1.5em;
+  background-color: #b0e35e;
+  position: relative;
+}
+.showshop:hover,
+.showupgrades:hover {
+  border-color: hwb(48 3% 24%);
+}

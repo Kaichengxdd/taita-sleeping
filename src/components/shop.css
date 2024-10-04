@@ -1,0 +1,34 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  font-weight: 700;
+  color: #000000;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+}
+.taita {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+}
+.taita-image {
+  height: 80px;
+  margin-right: 1em;
+}
+.buy-taita {
+  font-size: 1.2em;
+  background-color: #80708e;
+  color: black;
+  min-width: 250px;
+}
+.buy-taita:disabled {
+  background-color: #bbb5c1;
+  color: black;
+}
+.buy-taita:hover {
+  border-color: #992fbc;
+}
