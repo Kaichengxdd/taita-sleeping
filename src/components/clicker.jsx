@@ -1,12 +1,6 @@
 import "./clicker.css";
 
-function Clicker({
-  aura,
-  totalAura,
-  auraPerSecond,
-  setAura,
-  setTotalAura,
-}) {
+function Clicker({ aura, totalAura, auraPerSecond, setAura, setTotalAura }) {
   return (
     <>
       <div className="aura">

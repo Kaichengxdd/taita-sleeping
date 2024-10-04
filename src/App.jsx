@@ -6,7 +6,7 @@ import Clicker from "./components/clicker.jsx";
 import Switcher from "./components/switcher.jsx";
 
 function App() {
-  const [aura, setAura] = useState(0);
+  const [aura, setAura] = useState(1000);
   const [auraPerSecond, setAuraPerSecond] = useState(0);
   const [totalAura, setTotalAura] = useState(0);
   const [shopVisible, setShopVisible] = useState(false);
@@ -16,6 +16,10 @@ function App() {
   const [taitaPrice, setTaitaPrice] = useState(20);
   const [taitaSpeed, setTaitaSpeed] = useState(0.2);
   const [taitaUpgradePrice, setTaitaUpgradePrice] = useState(100);
+  const [aadi, setAadi] = useState(0);
+  const [aadiPrice, setAadiPrice] = useState(100);
+  const [aadiSpeed, setAadiSpeed] = useState(1.2);
+  const [aadiUpgradePrice, setAadiUpgradePrice] = useState(500);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,13 +49,18 @@ function App() {
         <Shop
           aura={aura}
           auraPerSecond={auraPerSecond}
-          setAura={setAura}
-          setAuraPerSecond={setAuraPerSecond}
           taita={taita}
           taitaPrice={taitaPrice}
           taitaSpeed={taitaSpeed}
+          aadi={aadi}
+          aadiPrice={aadiPrice}
+          aadiSpeed={aadiSpeed}
+          setAura={setAura}
+          setAuraPerSecond={setAuraPerSecond}
           setTaita={setTaita}
           setTaitaPrice={setTaitaPrice}
+          setAadi={setAadi}
+          setAadiPrice={setAadiPrice}
         />
       )}
       {upgradesVisible && (

@@ -7,10 +7,15 @@ function Shop({
   taita,
   taitaPrice,
   taitaSpeed,
+  aadi,
+  aadiPrice,
+  aadiSpeed,
   setAura,
   setAuraPerSecond,
   setTaita,
   setTaitaPrice,
+  setAadi,
+  setAadiPrice,
 }) {
   return (
     <>
@@ -40,6 +45,25 @@ function Shop({
               you have {taita} taitas
               <br />
               buy a taita for {taitaPrice} aura
+            </div>
+          </button>
+        </div>
+        <div className="aadi">
+          <button
+            className="buy-aadi"
+            onClick={() => {
+              setAura(aura - aadiPrice);
+              setAuraPerSecond(auraPerSecond + aadiSpeed);
+              setAadi(aadi + 1);
+              setAadiPrice(Math.ceil(aadiPrice * 1.15));
+            }}
+            disabled={aura < aadiPrice}
+            title={aura < aadiPrice ? "you do not have enough aura" : undefined}
+          >
+            <div>
+              you have {aadi} aadis
+              <br />
+              buy an aadi for {aadiPrice} aura
             </div>
           </button>
         </div>
