@@ -3,8 +3,10 @@ import "./switcher.css";
 function Switcher({
   shopVisible,
   upgradesVisible,
+  achievementsVisible,
   setShopVisible,
   setUpgradesVisible,
+  setAchievementsVisible,
 }) {
   return (
     <div className="switch">
@@ -13,6 +15,7 @@ function Switcher({
         onClick={() => {
           setShopVisible(!shopVisible);
           setUpgradesVisible(false);
+          setAchievementsVisible(false);
         }}
       >
         shop
@@ -22,9 +25,20 @@ function Switcher({
         onClick={() => {
           setUpgradesVisible(!upgradesVisible);
           setShopVisible(false);
+          setAchievementsVisible(false);
         }}
       >
         upgrades
+      </button>
+      <button
+        className="showachievements"
+        onClick={() => {
+          setAchievementsVisible(!achievementsVisible);
+          setShopVisible(false);
+          setUpgradesVisible(false);
+        }}
+      >
+        achievements
       </button>
     </div>
   );

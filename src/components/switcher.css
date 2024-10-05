@@ -7,13 +7,15 @@
 }
 
 .showshop,
-.showupgrades {
+.showupgrades,
+.showachievements {
   margin-top: 1em;
   font-size: 1.5em;
   background-color: #b0e35e;
   position: relative;
 }
 .showshop:hover,
-.showupgrades:hover {
+.showupgrades:hover,
+.showachievements:hover {
   border-color: hwb(48 3% 24%);
 }

@@ -4,13 +4,16 @@ import Shop from "./components/shop.jsx";
 import Upgrades from "./components/upgrades.jsx";
 import Clicker from "./components/clicker.jsx";
 import Switcher from "./components/switcher.jsx";
+import Achievements from "./components/achievements.jsx";
 
 function App() {
   const [aura, setAura] = useState(1000);
   const [auraPerSecond, setAuraPerSecond] = useState(0);
   const [totalAura, setTotalAura] = useState(0);
   const [shopVisible, setShopVisible] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
   const [upgradesVisible, setUpgradesVisible] = useState(false);
+  const [achievementsVisible, setAchievementsVisible] = useState(false);
 
   const [taita, setTaita] = useState(0);
   const [taitaPrice, setTaitaPrice] = useState(20);
@@ -20,6 +23,8 @@ function App() {
   const [aadiPrice, setAadiPrice] = useState(100);
   const [aadiSpeed, setAadiSpeed] = useState(1.2);
   const [aadiUpgradePrice, setAadiUpgradePrice] = useState(500);
+
+  const [achievements, setAchievements] = useState([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,14 +41,18 @@ function App() {
         aura={aura}
         auraPerSecond={auraPerSecond}
         totalAura={totalAura}
+        clickCount={clickCount}
         setAura={setAura}
         setTotalAura={setTotalAura}
+        setClickCount={setClickCount}
       />
       <Switcher
         shopVisible={shopVisible}
         upgradesVisible={upgradesVisible}
+        achievementsVisible={achievementsVisible}
         setShopVisible={setShopVisible}
         setUpgradesVisible={setUpgradesVisible}
+        setAchievementsVisible={setAchievementsVisible}
       />
       {shopVisible && (
         <Shop
@@ -74,6 +83,15 @@ function App() {
           setAuraPerSecond={setAuraPerSecond}
           setTaitaSpeed={setTaitaSpeed}
           setTaitaUpgradePrice={setTaitaUpgradePrice}
+        />
+      )}
+      {achievementsVisible && (
+        <Achievements
+          aura={aura}
+          totalAura={totalAura}
+          auraPerSecond={auraPerSecond}
+          clickCount={clickCount}
+          achievements={achievements}
         />
       )}
     </>

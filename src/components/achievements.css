@@ -1,4 +1,4 @@
-.shop {
+.achievements {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,29 +10,25 @@
   top: 10%;
   left: 70%;
 }
-.taita,
-.aadi {
+.first-click {
   display: flex;
   align-items: center;
   margin-top: 2em;
 }
-.taita-image {
+.first-click-img {
   height: 80px;
   margin-right: 1em;
 }
-.buy-taita,
-.buy-aadi {
+.first-click-button {
   font-size: 1.2em;
-  background-color: #80708e;
+  background-color: #44ff00;
   color: black;
   min-width: 250px;
 }
-.buy-taita:disabled,
-.buy-aadi:disabled {
-  background-color: #bbb5c1;
+.first-click-button:disabled {
+  background-color: #e74012;
   color: black;
 }
-.buy-taita:hover,
-.buy-aadi:hover {
+.first-click-button:hover {
   border-color: #992fbc;
 }
