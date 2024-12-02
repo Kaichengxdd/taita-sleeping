@@ -7,7 +7,7 @@ import Switcher from "./components/switcher.jsx";
 import Achievements from "./components/achievements.jsx";
 
 function App() {
-  const [aura, setAura] = useState(1000);
+  const [aura, setAura] = useState(0);
   const [auraPerSecond, setAuraPerSecond] = useState(0);
   const [totalAura, setTotalAura] = useState(0);
   const [shopVisible, setShopVisible] = useState(false);
@@ -92,6 +92,7 @@ function App() {
           auraPerSecond={auraPerSecond}
           clickCount={clickCount}
           achievements={achievements}
+          taita={taita}
         />
       )}
     </>
