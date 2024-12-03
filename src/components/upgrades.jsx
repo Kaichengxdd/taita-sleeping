@@ -11,6 +11,10 @@ function Upgrades({
   setAuraPerSecond,
   setTaitaSpeed,
   setTaitaUpgradePrice,
+  aadiSpeed,
+  aadiUpgradePrice,
+  setAadiSpeed,
+  setAadiUpgradePrice,
 }) {
   return (
     <>
@@ -42,6 +46,30 @@ function Upgrades({
               upgrade taita
               <br />
               costs {taitaUpgradePrice} aura
+            </div>
+          </button>
+        </div>
+        <div className="aadi">
+          <img alt="aadi" />
+          <button
+            className="upgrade-aadi"
+            onClick={() => {
+              setAuraPerSecond(auraPerSecond + aadiSpeed * aadi);
+              setAadiSpeed(aadiSpeed * 2.5);
+              setAura(aura - aadiUpgradePrice);
+              setAadiUpgradePrice(Math.ceil(aadiUpgradePrice * 7));
+            }}
+            disabled={aura < aadiUpgradePrice}
+            title={
+              aura < aadiUpgradePrice
+                ? "you do not have enough aura"
+                : undefined
+            }
+            >
+            <div>
+              upgrade aadi
+              <br />
+              costs {aadiUpgradePrice} aura
             </div>
           </button>
         </div>
