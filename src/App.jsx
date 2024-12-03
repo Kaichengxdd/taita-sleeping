@@ -83,6 +83,7 @@ function App() {
           setAuraPerSecond={setAuraPerSecond}
           setTaitaSpeed={setTaitaSpeed}
           setTaitaUpgradePrice={setTaitaUpgradePrice}
+          aadi={aadi}
           aadiSpeed={aadiSpeed}
           aadiUpgradePrice={aadiUpgradePrice}
           setAadiSpeed={setAadiSpeed}

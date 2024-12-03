@@ -11,6 +11,7 @@ function Upgrades({
   setAuraPerSecond,
   setTaitaSpeed,
   setTaitaUpgradePrice,
+  aadi,
   aadiSpeed,
   aadiUpgradePrice,
   setAadiSpeed,

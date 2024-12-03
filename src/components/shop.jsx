@@ -49,6 +49,7 @@ function Shop({
           </button>
         </div>
         <div className="aadi">
+          <img alt="aadi" />
           <button
             className="buy-aadi"
             onClick={() => {

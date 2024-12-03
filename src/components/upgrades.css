@@ -9,26 +9,37 @@
   position: absolute;
   top: 10%;
   left: 70%;
-}
-.taita {
-  display: flex;
-  align-items: center;
-  margin-top: 2em;
-}
-.taita-image {
-  height: 80px;
-  margin-right: 1em;
-}
-.upgrade-taita {
-  font-size: 1.2em;
-  background-color: #80708e;
-  color: black;
-  min-width: 250px;
-}
-.upgrade-taita:disabled {
-  background-color: #bbb5c1;
-  color: black;
-}
-.upgrade-taita:hover {
-  border-color: #992fbc;
+
+  div {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+  
+    div {
+      margin: 0;
+      flex-direction: column;
+    }
+  }
+
+  img {
+    height: 80px;
+    margin-right: 1em;
+    border-radius: 8px;
+  }
+
+  button {
+    font-size: 1.2em;
+    background-color: #80708e;
+    color: black;
+    min-width: 250px;
+  }
+
+  button:disabled {
+    background-color: #bbb5c1;
+    color: black;
+  }
+
+  button:hover {
+    border-color: #992fbc;
+  };
 }

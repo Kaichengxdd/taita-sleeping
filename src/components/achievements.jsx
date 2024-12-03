@@ -31,7 +31,7 @@ function Achievements({
         <img alt="500 clicks" />
         <button className="500-clicks-button" disabled={clickCount < 500}>
           <div>
-            500 clicks
+            <h3>500 clicks</h3>
             <br />
             click the button 500 times ({clickCount < 500
               ? clickCount
@@ -44,7 +44,7 @@ function Achievements({
         <img alt="5 taitas" />
         <button className="5-taitas-button" disabled={taita < 5}>
           <div>
-            5 taitas
+            <h3>5 taitas</h3>
             <br />
             buy 5 taitas ({taita} / 5)
           </div>
@@ -54,7 +54,7 @@ function Achievements({
         <img alt="slavery" />
         <button className="slavery-button" disabled={taita + aadi < 100}>
           <div>
-            Today's subject: slavery
+            <h3>Today's subject: slavery</h3>
             <br />
             buy 100 workers ({taita + aadi} / 100)
           </div>
@@ -66,11 +66,11 @@ function Achievements({
         />
         <button className="procrastinator-button" disabled={clickCount > 10 && totalAura < 10000}>
           <div>
-            procrastinator
+            <h3>procrastinator</h3>
             <br />
             reach 10,000 aura without clicking more than 10 times 
             <br />
-            ({totalAura < 10000 ? totalAura : "10,000"} / 10,000 | {clickCount} / 10)
+            ({totalAura < 10000 ? totalAura : "10,000"} / 10,000 | {10 - clickCount} clicks left)
           </div>
         </button>
       </div>
@@ -78,7 +78,7 @@ function Achievements({
         <img alt="sigma" />
         <button className="sigma-button" disabled={(taita + aadi) < 1 && totalAura < 10000}>
           <div>
-            sigma clicker
+            <h3>sigma clicker</h3>
             <br />
             reach 10,000 aura without buying workers 
             <br />
