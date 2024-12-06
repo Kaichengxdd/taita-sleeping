@@ -6,8 +6,10 @@ import Clicker from "./components/clicker.jsx";
 import Switcher from "./components/switcher.jsx";
 import Achievements from "./components/achievements.jsx";
 
+localStorage.clear();
+
 function App() {
-  const [aura, setAura] = useState(10000);
+  const [aura, setAura] = useState(20);
   const [auraPerSecond, setAuraPerSecond] = useState(0);
   const [totalAura, setTotalAura] = useState(0);
   const [shopVisible, setShopVisible] = useState(false);

@@ -64,25 +64,26 @@ function Achievements({
         <img
           alt="procrastinator"
         />
-        <button className="procrastinator-button" disabled={clickCount > 10 && totalAura < 10000}>
+        <button className="procrastinator-button" disabled={clickCount > 10 || totalAura < 10000}>
           <div>
             <h3>procrastinator</h3>
             <br />
             reach 10,000 aura without clicking more than 10 times 
             <br />
-            ({totalAura < 10000 ? totalAura : "10,000"} / 10,000 | {10 - clickCount} clicks left)
+            ({totalAura < 10000 ? Math.round(totalAura) : "10,000"} / 10,000 |  
+             {10 - clickCount > 0 ? 10 - clickCount : 0} clicks left)
           </div>
         </button>
       </div>
       <div className="sigma">
         <img alt="sigma" />
-        <button className="sigma-button" disabled={(taita + aadi) < 1 && totalAura < 10000}>
+        <button className="sigma-button" disabled={(taita + aadi) < 1 || totalAura < 10000}>
           <div>
             <h3>sigma clicker</h3>
             <br />
             reach 10,000 aura without buying workers 
             <br />
-            ({totalAura < 10000 ? totalAura : "10,000"} / 10,000)
+            ({totalAura < 10000 ? Math.round(totalAura) : "10,000"} / 10,000)
           </div>
         </button>
       </div>
