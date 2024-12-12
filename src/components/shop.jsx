@@ -1,5 +1,6 @@
 import "./shop.css";
 import taitaImage from "../img/taita.png";
+import aadiImage from "../img/aadi.jpg";
 
 function Shop({
   aura,
@@ -49,7 +50,12 @@ function Shop({
           </button>
         </div>
         <div className="aadi">
-          <img alt="aadi" />
+        <img 
+            src={aadiImage}
+            alt="aadi"
+            className="aadi-image"
+            title={`every aadi generates ${aadiSpeed} aura per second`}
+          />
           <button
             className="buy-aadi"
             onClick={() => {
