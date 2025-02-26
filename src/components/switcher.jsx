@@ -1,5 +1,3 @@
-import "./switcher.css";
-
 function Switcher({
   shopVisible,
   upgradesVisible,
@@ -9,9 +7,9 @@ function Switcher({
   setAchievementsVisible,
 }) {
   return (
-    <div className="switch">
+    <div className="flex flex-col items-center justify-center text-black absolute top-5/100 left-50/100 transform -translate-x-50/100">
       <button
-        className="showshop"
+        className="w-70 h-25 text-2xl bg-blue-400 border-5 border-transparent hover:border-blue-500 transition-colors duration-300 rounded-lg mb-4"
         onClick={() => {
           setShopVisible(!shopVisible);
           setUpgradesVisible(false);
@@ -21,7 +19,7 @@ function Switcher({
         shop
       </button>
       <button
-        className="showupgrades"
+        className="w-70 h-25 text-2xl bg-blue-400 border-5 border-transparent hover:border-blue-500 transition-colors duration-300 rounded-lg mb-4"
         onClick={() => {
           setUpgradesVisible(!upgradesVisible);
           setShopVisible(false);
@@ -31,7 +29,7 @@ function Switcher({
         upgrades
       </button>
       <button
-        className="showachievements"
+        className="w-70 h-25 text-2xl bg-blue-400 border-5 border-transparent hover:border-blue-500 transition-colors duration-300 rounded-lg"
         onClick={() => {
           setAchievementsVisible(!achievementsVisible);
           setShopVisible(false);
