@@ -1,5 +1,3 @@
-import "./clicker.css";
-
 function Clicker({
   aura,
   totalAura,
@@ -11,13 +9,15 @@ function Clicker({
 }) {
   return (
     <>
-      <div className="aura">
-        <h1>{aura.toFixed(1)} aura</h1>
-        <p>{auraPerSecond.toFixed(1)} aura per second</p>
-        <p>{totalAura.toFixed(1)} total aura</p>
-        <p>{clickCount} clicks</p>
+      <div className="flex flex-col items-center justify-center text-black absolute left-20/100 top-20/100 transform -translate-x-50/100">
+        <div className="flex flex-col items-center justify-center text-s font-normal space-y-2">
+          <span>{aura.toFixed(1)} aura</span>
+          <span>{auraPerSecond.toFixed(1)} aura per second</span>
+          <span>{totalAura.toFixed(1)} total aura</span>
+          <span>{clickCount} clicks</span>
+        </div>
         <button
-          className="button-click"
+          className="p-4 text-2xl mt-8 bg-purple-300 border-5 border-transparent hover:border-purple-700 transition-colors duration-300 rounded-lg"
           onClick={() => {
             setAura(aura + 1);
             setTotalAura(totalAura + 1);

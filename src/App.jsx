@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 import Shop from "./components/shop.jsx";
 import Upgrades from "./components/upgrades.jsx";
 import Clicker from "./components/clicker.jsx";
