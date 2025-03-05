@@ -11,7 +11,7 @@ function Achievements({
 }) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center text-black absolute left-80/100 top-10/100 transform -translate-x-50/100">
+      <div className="flex flex-col items-center justify-center text-textc absolute left-80/100 top-10/100 transform -translate-x-50/100">
         <div className="text-3xl mb-12">
           <span>achievements</span>
         </div>
@@ -23,10 +23,8 @@ function Achievements({
             title="first click"
           />
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
-              clickCount < 1
-                ? "bg-red-300 border-transparent hover:border-red-400"
-                : "bg-green-300 border-transparent hover:border-green-400"
+            className={`w-70 h-25 text-2xl transition-colors duration-300 rounded-lg ${
+              clickCount < 1 ? "bg-red-300" : "bg-green-300"
             }`}
             disabled={clickCount < 1}
           >
@@ -40,10 +38,8 @@ function Achievements({
         <div className="flex items-center space-x-4 mb-8">
           <img alt="500 clicks" className="w-20 h-25" title="500 clicks" />
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
-              clickCount < 500
-                ? "bg-red-300 border-transparent hover:border-red-400"
-                : "bg-green-300 border-transparent hover:border-green-400"
+            className={`w-70 h-25 text-2xl transition-colors duration-300 rounded-lg ${
+              clickCount < 500 ? "bg-red-300" : "bg-green-300"
             }`}
             disabled={clickCount < 500}
           >
@@ -57,10 +53,8 @@ function Achievements({
         <div className="flex items-center space-x-4 mb-8">
           <img alt="5 taitas" className="w-20 h-25" title="5 taitas" />
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
-              taita < 5
-                ? "bg-red-300 border-transparent hover:border-red-400"
-                : "bg-green-300 border-transparent hover:border-green-400"
+            className={`w-70 h-25 text-2xl transition-colors dusration-300 rounded-lg ${
+              taita < 5 ? "bg-red-300" : "bg-green-300"
             }`}
             disabled={taita < 5}
           >
@@ -73,10 +67,8 @@ function Achievements({
         <div className="flex items-center space-x-4 mb-8">
           <img alt="slavery" className="w-20 h-25" title="slavery" />
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
-              taita + aadi < 100
-                ? "bg-red-300 border-transparent hover:border-red-400"
-                : "bg-green-300 border-transparent hover:border-green-400"
+            className={`w-70 h-25 text-2xl transition-colors duration-300 rounded-lg ${
+              taita + aadi < 100 ? "bg-red-300" : "bg-green-300"
             }`}
             disabled={taita + aadi < 100}
           >
@@ -93,17 +85,17 @@ function Achievements({
             title="procrastinator"
           />
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
+            className={`w-70 h-25 text-2xl transition-colors duration-300 rounded-lg ${
               clickCount > 10 || totalAura < 10000
-                ? "bg-red-300 border-transparent hover:border-red-400"
-                : "bg-green-300 border-transparent hover:border-green-400"
+                ? "bg-red-300"
+                : "bg-green-300"
             }`}
             disabled={clickCount > 10 || totalAura < 10000}
           >
             <div>
               <h3>procrastinator</h3>
               <h3>reach 10,000 aura without clicking more than 10 times</h3>(
-              {totalAura < 10000 ? Math.round(totalAura) : "10,000"} / 10,000 |
+              {totalAura < 10000 ? Math.round(totalAura) : "10,000"} / 10,000 |{" "}
               {10 - clickCount > 0 ? 10 - clickCount : 0} clicks left)
             </div>
           </button>
@@ -111,10 +103,10 @@ function Achievements({
         <div className="flex items-center space-x-4 mb-8">
           <img alt="sigma" className="w-20 h-25" title="sigma" />
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
+            className={`w-70 h-25 text-2xl transition-colors duration-300 rounded-lg ${
               taita + aadi < 1 || totalAura < 10000
-                ? "bg-red-300 border-transparent hover:border-red-400"
-                : "bg-green-300 border-transparent hover:border-green-400"
+                ? "bg-red-300"
+                : "bg-green-300"
             }`}
             disabled={taita + aadi < 1 || totalAura < 10000}
           >

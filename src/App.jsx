@@ -8,7 +8,7 @@ import Achievements from "./components/achievements.jsx";
 localStorage.clear();
 
 function App() {
-  const [aura, setAura] = useState(20);
+  const [aura, setAura] = useState(99);
   const [auraPerSecond, setAuraPerSecond] = useState(0);
   const [totalAura, setTotalAura] = useState(0);
   const [shopVisible, setShopVisible] = useState(false);
