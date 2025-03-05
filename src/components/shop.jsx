@@ -18,22 +18,22 @@ function Shop({
 }) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center text-black absolute left-80/100 top-10/100 transform -translate-x-50/100">
+      <div className="flex flex-col items-center justify-center text-textc absolute left-80/100 top-10/100 transform -translate-x-50/100">
         <div className="text-3xl mb-12">
           <span>shop</span>
         </div>
         <div className="flex items-center space-x-4 mb-8">
-          <img
-            src={taitaImage}
-            alt="taita"
-            className="w-20 h-25"
-            title={`every taita generates ${taitaSpeed} aura per second`}
-          />
+          <div className="relative group">
+            <img src={taitaImage} alt="taita" className="w-20 h-25" />
+            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden whitespace-nowrap rounded bg-black px-2 py-1 text-sm text-white group-hover:block">
+              every taita generates {taitaSpeed} aura per second
+            </div>
+          </div>
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
+            className={`w-70 h-25 text-2xl transition-colors duration-300 rounded-lg ${
               aura < taitaPrice
-                ? "bg-gray-300 border-transparent hover:border-gray-400"
-                : "bg-gray-400 border-transparent hover:border-gray-500"
+                ? "bg-buttonnotbuyablec"
+                : "bg-buttonbuyablec hover:bg-buttonbuyableh"
             }`}
             onClick={() => {
               setAura(aura - taitaPrice);
@@ -60,10 +60,10 @@ function Shop({
             title={`every aadi generates ${aadiSpeed} aura per second`}
           />
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
+            className={`w-70 h-25 text-2xl transition-colors duration-300 rounded-lg ${
               aura < aadiPrice
-                ? "bg-gray-300 border-transparent hover:border-gray-400"
-                : "bg-gray-400 border-transparent hover:border-gray-500"
+                ? "bg-buttonnotbuyablec"
+                : "bg-buttonbuyablec hover:bg-buttonbuyableh"
             }`}
             onClick={() => {
               setAura(aura - aadiPrice);

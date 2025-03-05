@@ -18,7 +18,7 @@ function Upgrades({
 }) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center text-black absolute left-80/100 top-10/100 transform -translate-x-50/100">
+      <div className="flex flex-col items-center justify-center text-textc absolute left-80/100 top-10/100 transform -translate-x-50/100">
         <div className="text-3xl mb-12">
           <span>upgrades</span>
         </div>
@@ -30,10 +30,10 @@ function Upgrades({
             title={`upgrade doubles the aura generation of taitas`}
           />
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
+            className={`w-70 h-25 text-2xl transition-colors duration-300 rounded-lg ${
               aura < taitaUpgradePrice
-                ? "bg-gray-300 border-transparent hover:border-gray-400"
-                : "bg-gray-400 border-transparent hover:border-gray-500"
+                ? "bg-buttonnotbuyablec"
+                : "bg-buttonbuyablec hover:bg-buttonbuyableh"
             }`}
             onClick={() => {
               setAuraPerSecond(auraPerSecond + taitaSpeed * taita);
@@ -62,10 +62,10 @@ function Upgrades({
             title={`upgrade doubles the aura generation of aadis`}
           />
           <button
-            className={`w-70 h-25 text-2xl border-5 transition-colors duration-300 rounded-lg ${
+            className={`w-70 h-25 text-2xl transition-colors duration-300 rounded-lg ${
               aura < aadiUpgradePrice
-                ? "bg-gray-300 border-transparent hover:border-gray-400"
-                : "bg-gray-400 border-transparent hover:border-gray-500"
+                ? "bg-buttonnotbuyablec"
+                : "bg-buttonbuyablec hover:bg-buttonbuyableh"
             }`}
             onClick={() => {
               setAuraPerSecond(auraPerSecond + aadiSpeed * aadi);

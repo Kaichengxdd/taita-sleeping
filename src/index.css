@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bgc: #e2e2df;
+  --color-buttonc: #dbcdf0;
+  --color-buttonh: #e4d5f8;
+  --color-buttonc2: #f2c6de;
+  --color-buttonh2: #facfe8;
+  --color-textc: #000000;
+  --color-buttonnotbuyablec: #c2d2cf;
+  --color-buttonbuyablec: #dbcdf0;
+  --color-buttonbuyableh: #e4d5f8;
+}
